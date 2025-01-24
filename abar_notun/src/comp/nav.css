@@ -111,7 +111,42 @@
     font-weight: 600;
 }
 
-.header .mid_header .btn button:hover
+.header .mid_header .user .btn button:hover
+{
+    background: #181A2F;
+    color: #FDA481;
+}
+
+.header .mid_header .leave 
+{
+    display: flex;
+    margin-right: 60px;
+}
+
+.header .mid_header .leave .icon
+{
+    margin-right: 10px;
+    font-size: 30px;
+    color: black;
+}
+
+.header .mid_header .leave .btn button
+{
+    padding: 7px 7px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: none;
+    border: 2px solid #181A2F;
+    width: 70px;
+    background-color: #FDA481;
+    cursor: pointer;
+    font-size: 15px;
+    margin-right: 20px;
+    transition: 0.5s;
+    font-weight: 600;
+}
+
+.header .mid_header .leave .btn button:hover
 {
     background: #181A2F;
     color: #FDA481;

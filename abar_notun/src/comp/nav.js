@@ -2,6 +2,7 @@ import React from 'react'
 import {GiRapidshareArrow} from 'react-icons/gi';
 import {FaSearch} from 'react-icons/fa';
 import {FiLogIn} from 'react-icons/fi';
+import {CgLogOut} from 'react-icons/cg';
 import './nav.css'
 const Nav = () => {
   return (
@@ -31,6 +32,16 @@ const Nav = () => {
                     <button>Login </button>
                 </div>
             </div>
+
+            <div className='leave'>
+                <div className='icon'>
+                    <CgLogOut />
+                </div>
+                <div className='btn'>
+                    <button> Logout </button>
+                </div>
+            </div>
+
         </div>
     </div>
     </>
