@@ -1,10 +1,8 @@
 import React from 'react'
 
-const Donate = () => {
+function Donate() {
   return (
-    <div>
-        
-    </div>
+    <div>Donate</div>
   )
 }
 
