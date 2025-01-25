@@ -15,6 +15,7 @@ import Footer from './comp/Footer/Footer'
 const App = () => {
   return (
     <div>
+      <loginsignup/>
     <BrowserRouter>
      <Navbar/>
      <Routes>
