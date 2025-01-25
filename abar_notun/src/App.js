@@ -1,12 +1,12 @@
 import React from 'react'
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import { Navbar } from './comp/Navbar/Navbar'
-import Home from './pages/home'
-import Shop from './pages/shop'
+import Home from './pages/Home'
+import Shop from './pages/Shop'
 import Donate from './pages/Donate'
 import Product from './pages/Product'
-import Cart from './pages/cart'
-import Login from './pages/login'
+import Cart from './pages/Cart'
+import Login from './pages/Login'
 import Community from './pages/Community'
 const App = () => {
   return (
