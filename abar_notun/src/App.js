@@ -8,6 +8,10 @@ import Product from './pages/Product'
 import Cart from './pages/Cart'
 import Login from './pages/Login'
 import Community from './pages/Community'
+import Footer from './comp/Footer/Footer'
+
+
+
 const App = () => {
   return (
     <div>
@@ -24,9 +28,9 @@ const App = () => {
       <Route path='/cart' element={<Cart/>}/>
       <Route path='login' element={<Login/>}/>
       <Route path='/community' element={<Community/>}/>
-
-
-     </Routes>
+      </Routes>
+      <Footer/>
+    
     </BrowserRouter>
     </div>
   )
