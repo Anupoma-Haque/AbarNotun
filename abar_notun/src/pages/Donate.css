@@ -37,7 +37,7 @@
   }
   
   .rules-button {
-    background-color: #ff6347;
+    background-color: #54162B;
     color: white;
     border: none;
     padding: 12px 20px;
@@ -48,7 +48,7 @@
   }
   
   .rules-button:hover {
-    background-color: #ff2c00;
+    background-color: black;
   }
   
   .donation-form {
