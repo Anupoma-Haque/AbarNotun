@@ -5,7 +5,7 @@
     display: flex;
     justify-content: space-around;
     padding: 16px;
-    box-shadow: 0 1px 3px -2px rgb(205, 45, 45);
+    box-shadow: 0 1px 3px -2px #54162B;
 }
 
 .nav_logo{
@@ -39,7 +39,7 @@
     width: 80%;
     height: 3px;
     border-radius: 10px;
-    background-color: red;
+    background-color:#54162B;
 }
 .nav_login_cart{
     display: flex;
@@ -61,7 +61,7 @@
 }
 
 .nav_login_cart button:active{
-    background: gray;
+    background: #54162B;
 }
 .nav-cart-count{
     width: 22px;
@@ -73,6 +73,6 @@
     margin-left: -55px;
     border-radius: 11px;
     font-size: 14px;
-    background: red;
+    background: #54162B;
     color: white;
 }
