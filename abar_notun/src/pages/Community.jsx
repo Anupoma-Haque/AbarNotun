@@ -73,7 +73,7 @@ const Community = () => {
       </div>
 
       <div className="blogs-container">
-        <h2 className="blogs-title">Your Thoughts</h2>
+        <h2 className="blogs-title">Thoughts</h2>
         {blogs.length > 0 ? (
           blogs.map((blog, index) => (
             <div key={index} className="blog-item">
