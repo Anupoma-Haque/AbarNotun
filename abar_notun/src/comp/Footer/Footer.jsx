@@ -21,7 +21,7 @@ const Footer = () => {
                <img src={instagram_icon} alt="" />
              </div>
              <div className="footer-social-icon-container">
-               <img src={instagram_icon} alt="" />
+             <img src={instagram_icon} alt="" />
              </div>
              
             </div>
