@@ -20,10 +20,10 @@ const Community = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Add the new blog post to the blogs array
+   
     setBlogs((prevBlogs) => [...prevBlogs, formData]);
 
-    // Reset form
+    
     setFormData({
       title: "",
       content: "",

@@ -24,7 +24,7 @@ export default function DonatePage() {
     const category = selectedCategory;
     const imageFile = e.target["image-upload"].files[0];
 
-    // Create a new donated item object
+   
     const newItem = {
       id: Date.now(),
       name: itemName,
@@ -33,10 +33,10 @@ export default function DonatePage() {
       image: imageFile ? URL.createObjectURL(imageFile) : null,
     };
 
-    // Update the list of donated items
+    
     setDonatedItems((prevItems) => [...prevItems, newItem]);
 
-    // Reset the form
+
     e.target.reset();
     setSelectedCategory("");
     alert("Thank you for your donation!");
