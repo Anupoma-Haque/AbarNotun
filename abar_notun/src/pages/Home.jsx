@@ -7,6 +7,7 @@ import NewCollections from '../comp/NewCollections/NewCollections'
 
 
 
+
 const Home = () => {
   return (
     <div>
@@ -29,7 +30,7 @@ const Home = () => {
       <br />
       <br />
       <br />
-      
+     
       
     </div>
   )
