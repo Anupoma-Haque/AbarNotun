@@ -8,7 +8,7 @@ import Product from './pages/Product'
 import Cart from './pages/Cart'
 import Login from './pages/Login'
 import Community from './pages/Community'
-import Footer from './comp/Footer/Footer'
+
 
 
 
@@ -29,7 +29,7 @@ const App = () => {
       <Route path='login' element={<Login/>}/>
       <Route path='/community' element={<Community/>}/>
       </Routes>
-      <Footer/>
+      
     
     </BrowserRouter>
     </div>
