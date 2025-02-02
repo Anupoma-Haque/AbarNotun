@@ -1,0 +1,24 @@
+.product-item{
+    color: #4a5568; /* Equivalent to text-gray-700 */
+    cursor: pointer; /* Equivalent to cursor-pointer */
+}
+.productItem{
+    overflow: hidden; 
+}
+
+.productItem img{
+    transition: transform 0.3s ease-in-out;
+}
+.productItem img:hover{
+    transform: scale(1.1);
+}
+
+.name{
+    padding-top: 0.75rem; /* Equivalent to pt-3 (12px) */
+    padding-bottom: 0.25rem; /* Equivalent to pb-1 (4px) */
+    font-size: 0.875rem; /* Equivalent to text-sm (14px) */
+}
+.price{
+    font-size: 0.875rem; /* Equivalent to text-sm (14px) */
+    font-weight: 500; /* Equivalent to font-medium */
+}
