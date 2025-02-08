@@ -1,27 +1,77 @@
-.item{
+.item {
     width: 300px;
-   
+    margin: 20px;
 }
-.item p{
+
+.item p {
     margin: 4px 0px;
 }
 
-.item-prices{
+.item-prices {
     display: flex;
     gap: 20px;
 }
-.item-price-new{
+
+.item-price-new {
     color: #374151;
-    font-size: 18x;
+    font-size: 18px;  /* Fixed the 'x' typo */
     font-weight: 600;
 }
-.item-price-old{
+
+.item-price-old {
     color: #8c8c8c;
     font-size: 18px;
     font-weight: 500;
     text-decoration: line-through;
 }
-.item:hover{
+
+.item:hover {
     transform: scale(1.05);
     transition: 0.6s;
+}
+
+/* Responsive Design */
+
+/* For Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .item {
+        width: 250px; /* Adjust item width for tablet */
+    }
+
+    .item p {
+        font-size: 20px; /* Adjust font size for readability */
+    }
+
+    .item-prices {
+        gap: 10px; /* Reduce space between prices */
+    }
+
+    .item-price-new, .item-price-old {
+        font-size: 16px; /* Adjust font size of prices */
+    }
+}
+
+/* For Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    .item {
+        width: 180px; /* Adjust item width for small screens */
+        margin: 10px; /* Adjust margin for better fit */
+    }
+
+    .item p {
+        font-size: 16px; /* Smaller font size for mobile */
+    }
+
+    .item-prices {
+        flex-direction: column; /* Stack prices vertically */
+        gap: 5px; /* Reduce gap between stacked prices */
+    }
+
+    .item-price-new, .item-price-old {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+
+    .item:hover {
+        transform: scale(1); /* Disable hover effect on mobile */
+    }
 }

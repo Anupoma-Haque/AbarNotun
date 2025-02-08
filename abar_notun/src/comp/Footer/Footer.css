@@ -1,48 +1,55 @@
-.footer{
+.footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 50px;
+    padding: 30px;
 }
-.footer-logo{
+
+.footer-logo {
     display: flex;
     align-items: center;
     gap: 20px;
-    
 }
-.footer-logo img{
+
+.footer-logo img {
     padding-top: 20px;
     width: 100px;
     align-items: center;
 }
-.footer-logo p{
+
+.footer-logo p {
     color: #383838;
     font-size: 46px;
     font-weight: 700;
 }
-.footer-links{
+
+.footer-links {
     display: flex;
     list-style: none;
     gap: 50px;
     color: #252525;
     font-size: 20px;
 }
-.footer-links li{
+
+.footer-links li {
     cursor: pointer;
 }
-.footer-social-icon{
+
+.footer-social-icon {
     display: flex;
     gap: 20px;
-
 }
-.footer-social-icon-container{
+
+.footer-social-icon-container {
     padding: 10px;
     padding-bottom: 6px;
     background: #fbfbfb;
     border: 1px solid #ebebeb;
 }
-.footer-copyright{
+
+.footer-copyright {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -52,10 +59,68 @@
     color: #54162B;
     font-size: 20px;
 }
-.footer-copyright hr{
+
+.footer-copyright hr {
     width: 80%;
     border: none;
     border-radius: 10px;
     height: 3px;
     background: #54162B;
+}
+
+/* Responsive Design */
+
+/* For Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .footer {
+        padding: 20px;
+    }
+
+    .footer-logo p {
+        font-size: 36px; /* Reduce logo text size */
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px; /* Stack links vertically */
+    }
+
+    .footer-social-icon {
+        gap: 15px; /* Reduce gap for social icons */
+    }
+
+    .footer-copyright {
+        font-size: 18px; /* Reduce font size */
+    }
+}
+
+/* For Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    .footer {
+        padding: 15px;
+    }
+
+    .footer-logo p {
+        font-size: 28px; /* Further reduce logo text size */
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; /* Stack links vertically */
+        font-size: 16px; /* Reduce font size */
+    }
+
+    .footer-social-icon {
+        gap: 10px; /* Reduce gap between social icons */
+    }
+
+    .footer-copyright {
+        font-size: 16px; /* Reduce font size */
+    }
+
+    .footer-copyright hr {
+        width: 90%; /* Adjust the width of the line */
+    }
 }

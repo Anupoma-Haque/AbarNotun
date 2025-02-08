@@ -1,24 +1,61 @@
-.popular{
+.popular {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-
 }
-.popular h1{
+
+.popular h1 {
     color: #54162b;
     font-size: 45px;
     font-weight: 600;
 }
-.popular hr{
+
+.popular hr {
     width: 460px;
     height: 6px;
     border-radius: 10px;
     background: #54162b;
 }
-.popular_items{
+
+.popular_items {
     margin-top: 100px;
     display: flex;
     gap: 10px;
+}
 
+/* Responsive Design */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+    .popular h1 {
+        font-size: 35px;
+    }
+
+    .popular hr {
+        width: 80%;
+    }
+
+    .popular_items {
+        margin-top: 50px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+    .popular h1 {
+        font-size: 28px;
+    }
+
+    .popular hr {
+        width: 90%;
+    }
+
+    .popular_items {
+        margin-top: 30px;
+        flex-direction: column;
+        align-items: center;
+    }
 }

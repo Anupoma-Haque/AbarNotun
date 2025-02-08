@@ -1,30 +1,35 @@
-.offers{
+.offers {
     width: 65%;
     height: 60vh;
     display: flex;
     margin: auto;
     padding: 0px 140px;
     margin-bottom: 150px;
-    background: linear-gradient(180deg, #242E49 5%,#e1ffea22 60%);
+    background: linear-gradient(180deg, #242E49 5%, #e1ffea22 60%);
 }
-.offers-left{
+
+/* Left section */
+.offers-left {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-top: 150px;
 }
-.offers-left h1{
+
+.offers-left h1 {
     color: black;
     font-size: 60px;
     font-weight: 600;
 }
-offers-left p{
-    columns: black;
+
+.offers-left p {
+    color: black;
     font-size: 22px;
     font-weight: 600;
 }
-.offers-left button{
+
+.offers-left button {
     width: 250px;
     height: 50px;
     border-radius: 35px;
@@ -36,14 +41,86 @@ offers-left p{
     margin-top: 30px;
     cursor: pointer;
 }
-.offers-right{
+
+/* Right section */
+.offers-right {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     padding-top: 200px;
 }
-.offers-right img{
-    width: 300px;
 
+.offers-right img {
+    width: 300px;
+}
+
+/* Responsive Design */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+    .offers {
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+        padding: 0px 20px;
+    }
+
+    .offers-left {
+        padding-top: 50px;
+        text-align: center;
+    }
+
+    .offers-left h1 {
+        font-size: 40px;
+    }
+
+    .offers-left p {
+        font-size: 18px;
+    }
+
+    .offers-left button {
+        width: 200px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .offers-right {
+        padding-top: 30px;
+        justify-content: center;
+    }
+
+    .offers-right img {
+        width: 250px;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+    .offers {
+        width: 100%;
+        padding: 0px 10px;
+    }
+
+    .offers-left {
+        padding-top: 30px;
+    }
+
+    .offers-left h1 {
+        font-size: 30px;
+    }
+
+    .offers-left p {
+        font-size: 16px;
+    }
+
+    .offers-left button {
+        width: 180px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .offers-right img {
+        width: 200px;
+    }
 }

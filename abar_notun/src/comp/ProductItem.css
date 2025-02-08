@@ -1,24 +1,78 @@
-.product-item{
+.product-item {
     color: #4a5568; /* Equivalent to text-gray-700 */
     cursor: pointer; /* Equivalent to cursor-pointer */
-}
-.productItem{
-    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px; /* Adds padding around the product item */
+    background-color: #fff; /* Optional: Background color for clarity */
+    border-radius: 8px; /* Optional: Adds rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow effect */
 }
 
-.productItem img{
+/* For larger screens, product images are larger */
+.productItem {
+    overflow: hidden;
+    width: 100%;
+}
+
+.productItem img {
+    width: 100%;
+    height: auto; /* Ensure images maintain aspect ratio */
     transition: transform 0.3s ease-in-out;
 }
-.productItem img:hover{
+
+/* Hover effect */
+.productItem img:hover {
     transform: scale(1.1);
 }
 
-.name{
+.name {
     padding-top: 0.75rem; /* Equivalent to pt-3 (12px) */
     padding-bottom: 0.25rem; /* Equivalent to pb-1 (4px) */
     font-size: 0.875rem; /* Equivalent to text-sm (14px) */
+    font-weight: 500;
+    text-align: center;
+    color: #333; /* Optional: Color for text */
 }
-.price{
+
+.price {
     font-size: 0.875rem; /* Equivalent to text-sm (14px) */
     font-weight: 500; /* Equivalent to font-medium */
+    color: #374151; /* Dark gray for price */
+}
+
+/* Responsive Design */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+    .product-item {
+        width: 45%; /* Two items per row on tablets */
+        margin: 10px; /* Adds margin between items */
+    }
+
+    .name {
+        font-size: 0.8rem; /* Slightly smaller text for mobile */
+    }
+
+    .price {
+        font-size: 0.8rem; /* Slightly smaller text for mobile */
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+    .product-item {
+        width: 100%; /* One item per row on mobile */
+        margin: 10px 0; /* Adds top/bottom margin between items */
+    }
+
+    .name {
+        font-size: 0.75rem; /* Smaller text for mobile */
+    }
+
+    .price {
+        font-size: 0.75rem; /* Smaller text for mobile */
+    }
 }

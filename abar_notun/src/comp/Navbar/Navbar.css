@@ -1,31 +1,37 @@
-*{
+* {
     margin: 0;
-}
-.nav{
-    display: flex;
-    justify-content: space-around;
-    padding: 16px;
-    box-shadow: 0 1px 3px -2px #54162B;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.nav_logo{
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    box-shadow: 0 1px 3px -2px #54162B;
+    background-color: white;
+}
+
+.nav_logo {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-.nav_logo img{
+
+.nav_logo img {
     width: 100px;
 }
-.nav_menu{
+
+.nav_menu {
     display: flex;
     align-items: center;
     list-style: none;
     gap: 50px;
-    color: 20px;
     font-weight: 500;
 }
 
-.nav_menu li{
+.nav_menu li {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,20 +40,21 @@
     cursor: pointer;
 }
 
-.nav_menu hr{
+.nav_menu hr {
     border: none;
     width: 80%;
     height: 3px;
     border-radius: 10px;
-    background-color:#54162B;
+    background-color: #54162B;
 }
-.nav_login_cart{
+
+.nav_login_cart {
     display: flex;
     align-items: center;
     gap: 45px;
 }
 
-.nav_login_cart button{
+.nav_login_cart button {
     width: 157px;
     height: 58px;
     outline: none;
@@ -60,10 +67,12 @@
     cursor: pointer;
 }
 
-.nav_login_cart button:active{
+.nav_login_cart button:active {
     background: #54162B;
+    color: white;
 }
-.nav-cart-count{
+
+.nav-cart-count {
     width: 22px;
     height: 22px;
     display: flex;
@@ -75,4 +84,62 @@
     font-size: 14px;
     background: #54162B;
     color: white;
+}
+
+/* Responsive Design */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 12px;
+    }
+
+    .nav_menu {
+        gap: 20px;
+        font-size: 16px;
+    }
+
+    .nav_login_cart {
+        gap: 20px;
+    }
+
+    .nav_login_cart button {
+        width: 130px;
+        height: 50px;
+        font-size: 16px;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+    .nav_menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav_logo img {
+        width: 80px;
+    }
+
+    .nav_login_cart {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav_login_cart button {
+        width: 120px;
+        height: 45px;
+        font-size: 14px;
+    }
+
+    .nav-cart-count {
+        margin-top: -25px;
+        margin-left: -35px;
+        font-size: 12px;
+        width: 18px;
+        height: 18px;
+    }
 }

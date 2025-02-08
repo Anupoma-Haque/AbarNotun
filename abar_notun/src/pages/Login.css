@@ -1,0 +1,133 @@
+/* Reset margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Login form container */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 24rem; /* 384px */
+    margin: auto;
+    margin-top: 3.5rem;
+    gap: 1rem;
+    color: #4a4a4a;
+}
+
+/* Header section */
+.form-header {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-title {
+    font-family: 'Prata', serif;
+    font-size: 1.875rem; /* 30px */
+}
+
+.form-divider {
+    border: none;
+    height: 1.5px;
+    width: 2rem; /* 32px */
+    background-color: #4a4a4a;
+}
+
+/* Input styles */
+.form-input {
+    width: 100%;
+    padding: 0.5rem 0.75rem; /* 8px 12px */
+    border: 1px solid #4a4a4a;
+    font-size: 0.875rem; /* 14px */
+}
+
+/* Links section */
+.form-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 0.875rem; /* 14px */
+    margin-top: -0.5rem;
+}
+
+.form-link {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #4a4a4a;
+}
+
+/* Button styles */
+.form-button {
+    width: 100%;
+    background-color: #54162B;
+    color: #ffffff;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px; /* Base size for desktop */
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-button:hover {
+    background-color: green;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For smaller devices (tablets and below) */
+@media (max-width: 768px) {
+    .form-title {
+        font-size: 1.5rem; /* 24px */
+    }
+
+    .form-divider {
+        width: 1.5rem; /* 24px */
+    }
+
+    .form-input {
+        font-size: 0.8125rem; /* 13px */
+        padding: 0.4rem 0.6rem; /* 6px 10px */
+    }
+
+    .form-links {
+        font-size: 0.8rem; /* 12.8px */
+    }
+
+    .form-button {
+        font-size: 14px; /* Smaller button text for smaller screens */
+        padding: 10px;
+    }
+}
+
+/* For extra small devices (phones) */
+@media (max-width: 480px) {
+    .form-title {
+        font-size: 1.25rem; /* 20px */
+    }
+
+    .form-divider {
+        width: 1rem; /* 16px */
+    }
+
+    .form-input {
+        font-size: 0.75rem; /* 12px */
+        padding: 0.35rem 0.5rem; /* 5px 8px */
+    }
+
+    .form-links {
+        font-size: 0.75rem; /* 12px */
+    }
+
+    .form-button {
+        font-size: 12px; /* Smaller button text */
+        padding: 8px;
+    }
+}

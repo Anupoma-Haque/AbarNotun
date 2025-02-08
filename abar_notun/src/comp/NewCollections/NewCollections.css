@@ -1,24 +1,76 @@
-.new-collections{
+.new-collections {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-
+    padding: 20px;
 }
-.new-collections h1{
+
+.new-collections h1 {
     color: #54162b;
     font-size: 45px;
     font-weight: 600;
+    text-align: center;
+    margin: 0;  /* Ensure no default margin is added */
 }
-.new-collections hr{
+
+.new-collections hr {
     width: 460px;
     height: 6px;
     border-radius: 10px;
     background: #54162b;
+    margin: 20px 0;
 }
-.collections{
+
+/* Collections Grid */
+.collections {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr;
     margin-top: 50px;
     gap: 30px;
+}
+
+/* Responsive Design */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+    .new-collections h1 {
+        font-size: 36px;  /* Adjust title font size */
+    }
+
+    .new-collections hr {
+        width: 300px;
+        height: 5px;
+    }
+
+    .collections {
+        grid-template-columns: 1fr 1fr;  /* 2 items per row on tablet */
+        gap: 20px;
+    }
+
+    .new-collections {
+        padding: 15px;  /* Add padding to prevent content from touching edges */
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+    .new-collections h1 {
+        font-size: 28px;  /* Adjust title font size */
+    }
+
+    .new-collections hr {
+        width: 200px;
+        height: 4px;
+    }
+
+    .collections {
+        grid-template-columns: 1fr;  /* 1 item per row on mobile */
+        gap: 15px;
+        margin-top: 30px;
+    }
+
+    .new-collections {
+        padding: 10px;  /* Add more padding for smaller screens */
+    }
 }

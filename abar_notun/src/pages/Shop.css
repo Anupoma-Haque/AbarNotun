@@ -1,4 +1,3 @@
-
 .shop {
     display: flex;
     flex-direction: column;
@@ -13,21 +12,24 @@
         gap: 2.5rem; /* Equivalent to gap-10 in Tailwind */
     }
 }
+
 .filter {
     min-width: 15rem; /* Equivalent to min-w-60 in Tailwind (60 * 4px = 240px or 15rem) */
 }
-.filter p{
-    margin-top: 1px;  /* Equivalent to my-2 in Tailwind (8px) */
+
+.filter p {
+    margin-top: 1px; /* Equivalent to my-2 in Tailwind (8px) */
     margin-bottom: 0.5rem;
     margin-left: 50px;
-    font-size: 25px; 
+    font-size: 25px;
     font-weight: 550;
-    display: flex;       /* Equivalent to flex in Tailwind */
-    align-items:flex-start; /* Equivalent to items-center in Tailwind */
-    cursor: pointer;     /* Equivalent to cursor-pointer in Tailwind */
-    gap: 0.5rem;         /* Equivalent to gap-2 in Tailwind (8px) */
+    display: flex; /* Equivalent to flex in Tailwind */
+    align-items: flex-start; /* Equivalent to items-center in Tailwind */
+    cursor: pointer; /* Equivalent to cursor-pointer in Tailwind */
+    gap: 0.5rem; /* Equivalent to gap-2 in Tailwind (8px) */
 }
-.category{
+
+.category {
     border: 1px solid #d1d5db; /* Equivalent to border-gray-300 in Tailwind */
     padding-left: 1px; /* Equivalent to pl-5 (20px) */
     padding-top: 12px; /* Equivalent to py-3 (12px) */
@@ -37,22 +39,25 @@
     margin-left: 40px;
     margin-right: 50px;
 }
+
 .hidden {
     display: none; /* Equivalent to hidden in Tailwind */
 }
+
 @media (min-width: 640px) { 
     .sm-block {
         display: block !important; /* Ensures it's always visible on small screens */
     }
 }
-.category p{
+
+.category p {
     margin-bottom: 0.75rem; /* Equivalent to mb-3 (12px) */
     font-size: 18px; /* Equivalent to text-sm (14px) */
-    font-weight: 500; 
+    font-weight: 500;
     margin-left: 10px;
-  
 }
-.checkbox{
+
+.checkbox {
     display: flex; /* Equivalent to flex */
     flex-direction: column; /* Equivalent to flex-col */
     gap: 5px; /* Equivalent to gap-2 (8px) */
@@ -63,14 +68,16 @@
     margin-right: 0.1px;
 }
 
-.checkbox p{
+.checkbox p {
     display: flex; /* Equivalent to flex */
     gap: 8px;
     font-size: 14px;
 }
-.checkbox p input{
-    width: 12px; 
+
+.checkbox p input {
+    width: 12px;
 }
+
 .img {
     height: 0.75rem; /* Equivalent to h-3 (12px) */
 }
@@ -84,34 +91,33 @@
 .rotate-90 {
     transform: rotate(90deg);
 }
-.right{
+
+.right {
     flex: 1 1 0%;
 }
+
 .right-text {
     display: flex; /* Equivalent to flex */
     justify-content: space-between; /* Equivalent to justify-between */
     font-size: 1rem; /* Equivalent to text-base (16px) */
     margin-bottom: 1rem; /* Equivalent to mb-4 (16px) */
 }
+
 @media (max-width: 390px) { 
     .right-text {
         margin-left: 60px;
         margin-right: 20px;
-        font-size:20px ;
-    }
-    .right-text h3{
-        
+        font-size: 20px;
     }
 }
 
-
-/* For small screens (sm), apply text-2xl */
 @media (min-width: 640px) {
     .right-text {
         font-size: 1.5rem; /* Equivalent to text-2xl (24px) */
     }
 }
-.product-sort{
+
+.product-sort {
     border-width: 2px; /* Equivalent to border-2 */
     border-color: #d1d5db; /* Equivalent to border-gray-300 */
     font-size: 0.875rem; /* Equivalent to text-sm (14px) */
@@ -119,6 +125,7 @@
     padding-right: 0.5rem; /* Equivalent to px-2 (8px) */
     margin-right: 40px;
 }
+
 @media (max-width: 390px) { 
     .product-sort {
         margin-left: 20px;
@@ -134,7 +141,7 @@
     gap: 1rem; /* Equivalent to gap-4 (16px) */
     row-gap: 1.5rem; /* Equivalent to gap-y-6 (24px) */
 }
-/* Medium screens (md:grid-cols-3) */
+
 @media (max-width: 390px) { 
     .map-product {
         display: grid;
@@ -143,10 +150,21 @@
         margin-top: 20px;
         margin-right: 0px;
         gap: 2px;
-        
     }
 }
 
+/* New responsive adjustments for product images */
+@media (max-width: 768px) { /* Tablet screens */
+    .map-product {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+    }
+}
 
-
-
+@media (max-width: 480px) { /* Mobile screens */
+    .map-product {
+        grid-template-columns: 1fr; /* 1 item per row */
+        gap: 1rem; /* Adjusts the gap between items */
+        margin-left: 0; /* Remove margin on small screens */
+        margin-right: 0;
+    }
+}
