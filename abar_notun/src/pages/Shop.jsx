@@ -12,6 +12,7 @@ const Shop = () => {
   const [filterProducts,setFilterProducts]=useState([]);
   const [category,setCategory]=useState([]);
   const [subCategory,setSubCategory]=useState([]);
+  const [sortType,setSortType]=useState('relavent')
 
   const toggleCategory = (e) =>{
     if(category.includes(e.target.value)){
@@ -42,14 +43,36 @@ const Shop = () => {
 
     setFilterProducts(productsCopy)
   }
-
+  
+  const sortProduct = () =>{
+    let fpCopy= filterProducts.slice();
+  
+    switch(sortType){
+      case 'low-high':
+        setFilterProducts(fpCopy.sort((a,b)=>(a.price-b.price)));
+        break;
+  
+        case 'high-low':
+          setFilterProducts(fpCopy.sort((a,b)=>(b.price-a.price)));
+          break;
+       
+          default:
+            applyFilter();
+            break;
+        
+    }
+  }
+    
+  
 
 
   useEffect(()=>{
     applyFilter();
   },[category,subCategory])
 
- 
+  useEffect(()=>{
+    sortProduct();
+     },[sortType])
 
   return (
     <div className="shop">
@@ -76,7 +99,7 @@ const Shop = () => {
                      <p>Type</p>
                      <div className="checkbox">
                       <p> 
-                        <input type="checkbox" value={'TopWear'} onChange={toggleSubCategory}/>Topwear
+                        <input type="checkbox" value={'Topwear'} onChange={toggleSubCategory}/>Topwear
                       </p>
                       <p> 
                         <input type="checkbox" value={'Bottomwear'} onChange={toggleSubCategory}/>Bottomwear
@@ -93,7 +116,7 @@ const Shop = () => {
           <div className='right-text'>
              <h3>All Collections_____</h3>
 
-             <select className='product-sort'>
+             <select onChange={(e)=>setSortType(e.target.value)} className='product-sort'>
               <option value="Relevant">Sort by:Relavant</option>
               <option value="low-high">Sort by:low to high</option>
               <option value="high-low">Sort by:high to low</option>
