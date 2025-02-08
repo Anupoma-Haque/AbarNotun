@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./Donate.css";
+import "./Sell.css";
 
-export default function DonatePage() {
+export default function SellPage() {
   const [categories, setCategories] = useState([
     "Clothes",
     "Books",
@@ -11,32 +11,42 @@ export default function DonatePage() {
     "Miscellaneous",
   ]);
   const [selectedCategory, setSelectedCategory] = useState("");
-  const [donatedItems, setDonatedItems] = useState([]);
+  const [price, setPrice] = useState(""); // New state to store price
+  const [sellItems, setSellItems] = useState([]);
 
-  const handleCategoryChange = (e) => {
+  function handleCategoryChange(e) {
     setSelectedCategory(e.target.value);
-  };
+  }
 
-  const handleDonationSubmit = (e) => {
+  function handlePriceChange(e) {
+    setPrice(e.target.value); // Update price state
+  }
+
+  const handleSellSubmit = (e) => {
     e.preventDefault();
     const itemName = e.target["item-name"].value;
     const itemDescription = e.target["item-description"].value;
     const category = selectedCategory;
     const imageFile = e.target["image-upload"].files[0];
 
+    // Create the new item object with price added
     const newItem = {
       id: Date.now(),
       name: itemName,
       description: itemDescription,
       category: category,
+      price: price, // Include price in the item object
       image: imageFile ? URL.createObjectURL(imageFile) : null,
     };
 
-    setDonatedItems((prevItems) => [...prevItems, newItem]);
+    // Add new item to the list
+    setSellItems((prevItems) => [...prevItems, newItem]);
 
+    // Reset the form fields
     e.target.reset();
     setSelectedCategory("");
-    alert("Thank you for your donation!");
+    setPrice(""); // Reset price input field
+    alert("Your Product Is Up For Sell");
   };
 
   const showRulesAndRegulations = () => {
@@ -44,18 +54,18 @@ export default function DonatePage() {
     1. Items must be in good, usable condition.
     2. No prohibited or illegal items allowed.
     3. Ensure proper packaging for fragile items.
-    4. Only donate items you legally own.
+    4. Only sell items you legally own.
     5. The platform reserves the right to reject inappropriate items.
 
     More details:
-    Donors must ensure all items are clean and functional before donation. Electronics should include necessary cables or accessories. Books must be free from excessive damage, and clothes should be freshly washed. Thank you for contributing responsibly.`);
+    Sellers must ensure all items are clean and functional before listing. Electronics should include necessary cables or accessories. Books must be free from excessive damage, and clothes should be freshly washed. Thank you for selling responsibly.`);
   };
 
   return (
-    <div className="donate-page">
+    <div className="sell-page">
       {/* Banner */}
-      <div className="donate-banner">
-        <h1>Make a Difference: Donate Your Items</h1>
+      <div className="sell-banner">
+        <h1>Don’t Store It, Sell It!</h1>
         <p>Your unused items can change someone’s life.</p>
       </div>
 
@@ -66,9 +76,9 @@ export default function DonatePage() {
         </button>
       </div>
 
-      {/* Donation Form */}
-      <form className="donation-form" onSubmit={handleDonationSubmit}>
-        <h2>Donate an Item</h2>
+      {/* Sell Form */}
+      <form className="sell-form" onSubmit={handleSellSubmit}>
+        <h2>Sell an Item</h2>
 
         <label htmlFor="item-name">Item Name</label>
         <input
@@ -101,22 +111,32 @@ export default function DonatePage() {
           ))}
         </select>
 
+        <label htmlFor="price">Price</label>
+        <input
+          type="number"
+          id="price"
+          placeholder="Enter item price"
+          value={price}
+          onChange={handlePriceChange}
+          required
+        />
+
         <label htmlFor="image-upload">Upload Image (Optional)</label>
         <input type="file" id="image-upload" accept="image/*" />
 
         <button type="submit" className="submit-button">
-          Donate
+          Up For Sell
         </button>
       </form>
 
-      {/* Donated Items List */}
-      <div className="donated-items">
-        <h2>Donated Items</h2>
-        {donatedItems.length === 0 ? (
-          <p>No items have been donated yet.</p>
+      {/* Given Items List */}
+      <div className="sell-items">
+        <h2>Added Items</h2>
+        {sellItems.length === 0 ? (
+          <p>No items have been added for sell yet.</p>
         ) : (
           <div className="items-grid">
-            {donatedItems.map((item) => (
+            {sellItems.map((item) => (
               <div key={item.id} className="item-card">
                 {item.image && (
                   <img
@@ -128,6 +148,7 @@ export default function DonatePage() {
                 <h3>{item.name}</h3>
                 <p>{item.description}</p>
                 <span className="item-category">Category: {item.category}</span>
+                <p className="item-price">Price: ${item.price}</p> {/* Display price */}
               </div>
             ))}
           </div>

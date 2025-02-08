@@ -4,6 +4,8 @@ import { Navbar } from './comp/Navbar/Navbar'
 import Home from './pages/Home'
 import Shop from './pages/Shop'
 import Donate from './pages/Donate'
+import Sell from './pages/Sell'
+import Add from './pages/Add'
 import Product from './pages/Product'
 import Cart from './pages/Cart'
 import Login from './pages/Login'
@@ -21,10 +23,11 @@ const App = () => {
      <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/shop' element={<Shop/>}/>
+      <Route path='/add' element={<Add/>}/>
       <Route path='/donate' element={<Donate/>}/>
+      <Route path='/sell' element={<Sell/>}/>
       <Route path="/product" element={<Product/>}>
        <Route path=':productId' element={<Product/>}/>
-
       </Route>
       <Route path='/cart' element={<Cart/>}/>
       <Route path='login' element={<Login/>}/>

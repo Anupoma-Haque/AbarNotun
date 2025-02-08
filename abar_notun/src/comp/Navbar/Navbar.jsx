@@ -15,7 +15,7 @@ export const Navbar = () => {
          <ul className="nav_menu">
                 <li onClick={()=>{setMenu("home")}}><Link style={{textDecoration:'none'}}  to='/'>Home</Link>  {menu==="home"?<hr/>:<></>} </li>
                  <li onClick={()=>{setMenu("shop")}}><Link style={{textDecoration:'none'}} to='/shop'>Shop</Link> {menu==="shop"?<hr/>:<></>}</li>
-                 <li onClick={()=>{setMenu("donate")}}><Link style={{textDecoration:'none'}} to='/donate'>Donate</Link> {menu==="donate"?<hr/>:<></>}</li>
+                 <li onClick={()=>{setMenu("add")}}><Link style={{textDecoration:'none'}} to='/add'>Add</Link> {menu==="add"?<hr/>:<></>}</li>
                  <li onClick={()=>{setMenu("community")}}><Link style={{textDecoration:'none'}} to='/community'>Community</Link> {menu==="community"?<hr/>:<></>}</li>
          </ul>
          <div  className="nav_login_cart">
