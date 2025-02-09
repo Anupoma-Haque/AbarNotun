@@ -1,11 +1,4 @@
-/* Global Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Container Styles */
+/* Main Container */
 .container {
   min-height: 100vh;
   background-color: #f3f4f6;
@@ -15,7 +8,25 @@
   padding: 16px;
 }
 
-/* Form Container */
+/* Add Blog Button */
+.add-blog-button {
+  background-color: #54162B;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 16px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.add-blog-button:hover {
+  background-color: #6b1d3a;
+}
+
+/* Blog Submission Form */
 .form-container {
   width: 100%;
   max-width: 640px;
@@ -26,13 +37,7 @@
   margin-bottom: 32px;
 }
 
-.form-title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 16px;
-  color: #54162B;
-}
-
+/* Form Labels */
 .form-label {
   display: block;
   margin-bottom: 8px;
@@ -40,10 +45,10 @@
   color: #4b5563;
 }
 
-.form-input,
-.form-textarea {
+/* Input Fields */
+.form-input {
   width: 100%;
-  padding: 8px;
+  padding: 10px;
   margin-bottom: 16px;
   border: 1px solid #d1d5db;
   border-radius: 8px;
@@ -52,16 +57,31 @@
   color: #111827;
 }
 
-.form-input:focus,
+.form-input:focus {
+  border-color: #54162B;
+  box-shadow: 0 0 0 2px #54162B;
+}
+
+/* Textarea */
+.form-textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+  color: #111827;
+  resize: vertical;
+  min-height: 100px;
+}
+
 .form-textarea:focus {
   border-color: #54162B;
   box-shadow: 0 0 0 2px #54162B;
 }
 
-.form-textarea {
-  resize: vertical;
-}
-
+/* Submit Button */
 .submit-button {
   width: 100%;
   background-color: #54162B;
@@ -76,124 +96,129 @@
 }
 
 .submit-button:hover {
-  cursor: pointer;
+  background-color: rgb(0, 128, 0);
+  transform: scale(1.05);
 }
 
-/* Blogs Container */
+/* Blogs Section */
 .blogs-container {
   width: 100%;
   max-width: 640px;
 }
 
-.blogs-title {
-  font-size: 30px;
-  font-weight: bold;
-  margin-bottom: 16px;
-  color: #54162B;
-}
-
+/* Blog Item */
 .blog-item {
   background-color: #ffffff;
   padding: 16px;
   border-radius: 16px;
-  box-shadow: 0 4px 6px #54162B;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 16px;
+  border-left: 6px solid #54162B;
 }
 
+/* Blog Title */
 .blog-title {
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 600;
   margin-bottom: 8px;
   color: #1f2937;
 }
 
-.blog-content {
-  margin-bottom: 10px;
-  color: #374151;
-}
-
-.blog-author {
+/* Blog Author */
+.blog-author,
+.blog-email {
   font-size: 14px;
   color: #6b7280;
 }
 
-.no-blogs {
-  color: #6b7280;
-  font-size: 16px;
+/* Blog Image */
+.blog-image {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
 }
 
-/* Media Queries */
+/* Image Preview */
+.image-preview {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 8px;
+}
 
-/* Tablets (max-width: 768px) */
+/* Responsive Styles */
+
+/* For screens smaller than 768px (Tablets and below) */
 @media (max-width: 768px) {
-  .form-container {
-      padding: 16px;
+  .add-blog-button {
+    font-size: 16px;
+    padding: 10px 20px;
   }
 
-  .form-title {
-      font-size: 20px;
+  .form-container {
+    padding: 16px;
   }
 
   .form-input,
-  .form-textarea {
-      font-size: 14px;
-      padding: 12px;
-  }
-
+  .form-textarea,
   .submit-button {
-      font-size: 14px;
-      padding: 10px;
-  }
-
-  .blogs-title {
-      font-size: 26px;
+    font-size: 14px;
   }
 
   .blog-title {
-      font-size: 24px;
+    font-size: 20px;
   }
 
   .blog-item {
-      padding: 12px;
+    padding: 12px;
+  }
+
+  .blog-image {
+    max-height: 200px;
+  }
+
+  .image-preview {
+    max-height: 180px;
   }
 }
 
-/* Mobile (max-width: 480px) */
+/* For screens smaller than 480px (Mobile devices) */
 @media (max-width: 480px) {
-  .form-container {
-      width: 100%;
-      padding: 16px;
+  .container {
+    padding: 8px;
   }
 
-  .form-title {
-      font-size: 18px;
+  .add-blog-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .form-container {
+    padding: 12px;
   }
 
   .form-input,
-  .form-textarea {
-      font-size: 14px;
-      padding: 10px;
-  }
-
+  .form-textarea,
   .submit-button {
-      font-size: 14px;
-      padding: 10px;
-  }
-
-  .blogs-title {
-      font-size: 22px;
+    font-size: 14px;
   }
 
   .blog-title {
-      font-size: 20px;
+    font-size: 18px;
   }
 
   .blog-item {
-      padding: 12px;
+    padding: 8px;
   }
 
-  .blog-content,
-  .blog-author {
-      font-size: 14px;
+  .blog-image {
+    max-height: 150px;
+  }
+
+  .image-preview {
+    max-height: 150px;
   }
 }

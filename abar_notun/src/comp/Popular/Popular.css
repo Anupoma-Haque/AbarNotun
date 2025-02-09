@@ -20,8 +20,17 @@
 
 .popular_items {
     margin-top: 100px;
+    margin-right: 50px;
     display: flex;
     gap: 10px;
+    flex-wrap: wrap; /* Ensure items wrap to the next line if necessary */
+    justify-content: center;
+}
+
+.popular_item {
+    width: 150px;  /* Set width for each image item */
+    height: auto;
+    margin-bottom: 20px;  /* Space between rows */
 }
 
 /* Responsive Design */
@@ -38,8 +47,14 @@
 
     .popular_items {
         margin-top: 50px;
+        /* Allow items to wrap and align properly */
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .popular_item {
+        width: 30%;  /* Adjust width for tablets to fit two items in a row */
+        margin-bottom: 15px;  /* Space between items */
     }
 }
 
@@ -55,7 +70,13 @@
 
     .popular_items {
         margin-top: 30px;
+        /* Stack items vertically on mobile */
         flex-direction: column;
         align-items: center;
+    }
+
+    .popular_item {
+        width: 40%;  /* Take up more width on mobile */
+        margin-bottom: 15px;  /* Space between images */
     }
 }
