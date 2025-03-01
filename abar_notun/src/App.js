@@ -11,6 +11,7 @@ import Cart from './pages/Cart'
 import Login from './pages/Login'
 import Community from './pages/Community'
 import Footer from './comp/Footer/Footer'
+import ShopContextProvider from './Context/ShopContext'
 
 
 
@@ -18,6 +19,7 @@ import Footer from './comp/Footer/Footer'
 const App = () => {
   return (
     <div>
+      <ShopContextProvider>
     <BrowserRouter>
      <Navbar/>
      <Routes>
@@ -36,6 +38,7 @@ const App = () => {
       <Footer/>
     
     </BrowserRouter>
+    </ShopContextProvider>
     </div>
   )
 }

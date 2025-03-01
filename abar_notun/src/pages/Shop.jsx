@@ -7,7 +7,7 @@ import { assets } from '../comp/Assets/assets';
 import ProductItem from '../comp/ProductItem';
 const Shop = () => {
   
- // const{products}=useContext(ShopContext);
+  const{products}=useContext(ShopContext);
   const [showFilter,setShowFilter]=useState(false);
   const [filterProducts,setFilterProducts]=useState([]);
   const [category,setCategory]=useState([]);

@@ -1,0 +1,66 @@
+
+.cart{
+    padding-top: 20px; 
+border-top-width: 1px; 
+}
+
+.title{
+margin-bottom: 0.75rem; 
+font-size: 1.5rem;
+line-height: 2rem; 
+margin-left: 30px;
+
+}
+   .show {
+    padding-top: 1rem; /* py-4 (4 × 0.25rem = 1rem) */
+    padding-bottom: 1rem;
+    
+    border-top: 1px solid #e5e7eb; /* border-t (default Tailwind border color) */
+    border-bottom: 1px solid #e5e7eb; /* border-b */
+    
+    color: #374151; /* text-gray-700 */
+    
+    display: grid; /* grid */
+    grid-template-columns: 4fr 0.5fr 0.5fr; /* grid-cols-[4fr_0.5fr_0.5fr] */
+
+    align-items: center; /* items-center */
+    gap: 1rem; /* gap-4 (4 × 0.25rem = 1rem) */
+}
+
+/* Responsive for small screens (sm:) */
+@media (min-width: 640px) { /* Tailwind's sm breakpoint */
+    .show {
+        grid-template-columns: 4fr 2fr 0.5fr; /* sm:grid-cols-[4fr_2fr_0.5fr] */
+    }
+}
+
+.show2{
+    display: flex; 
+gap: 1.5rem; 
+align-items: flex-start; 
+}
+.show2 img {
+    width: 4rem; /* w-16 (16 × 0.25rem = 4rem) */
+}
+
+/* Responsive for small screens (sm:) */
+@media (min-width: 640px) { /* Tailwind's sm breakpoint */
+    .show2 img {
+        width: 5rem; /* w-20 (20 × 0.25rem = 5rem) */
+    }
+}
+.name p{font-size: 0.75rem;
+line-height: 1rem; 
+font-weight: 500; 
+}
+@media (min-width: 640px) { 
+  .name p{font-size: 1.125rem;
+line-height: 1.75rem; 
+  }
+ }
+
+
+
+
+
+
