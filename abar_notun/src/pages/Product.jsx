@@ -1,12 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react'
 import {useParams} from 'react-router-dom'
-//import { ShopContext } from '../Context/ShopContext';
-import { assets, products } from '../comp/Assets/assets';
+import { ShopContext } from '../Context/ShopContext';
+import { assets } from '../comp/Assets/assets';
 import './Product.css'
 const Product = () => {
 
   const {productId}= useParams();
-  //const {Products}=useContext(ShopContext)
+  const {products,addToCart}=useContext(ShopContext)
   const [productData,setProductData]=useState(false);
   const [image,setImage]=useState('')
 
@@ -14,7 +14,7 @@ const Product = () => {
          products.map((item)=>{
               if(item._id===productId){
                 setProductData(item)
-                console.log(item);
+               
                 setImage(item.image[0])
                 return null;
               }
@@ -52,7 +52,7 @@ const Product = () => {
           </div>
           <p className="price">{productData.price}/-</p>
           <p className="des">{productData.description}</p>
-          <button className="button">Add to Cart</button>
+          <button onClick={()=>addToCart(productData._id)} className="button">Add to Cart</button>
           <br />
           <br />
           <hr />

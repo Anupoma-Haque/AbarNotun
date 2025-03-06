@@ -1,26 +1,25 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { ShopContext } from '../Context/ShopContext'
 import './Cart.css'
+import { assets } from '../comp/Assets/assets';
+import CartTotal from '../comp/CartTotal';
 const Cart = () => {
 
-  const {products,currency,cartItems}=useContext(ShopContext);
+  const {products,currency,cartItems,updateQuatity}=useContext(ShopContext);
   const [cartData,setCartData]=useState([]);
-  useEffect(()=>{
-         const tempData=[];
-         console.log(tempData);
-         for(const items in cartItems){
-          for(const item in cartItems[items]){
-            if(cartItems[items][item]>0){
-             tempData.push({
-                _id:items,
-                quantity:cartItems[items][item]
-              })
-
-            }
-          }
-         }
-         setCartData(tempData);
-  },[cartItems])
+  useEffect(() => {
+    const tempData = [];
+    for (const productId in cartItems) {
+      if (cartItems[productId] > 0) {
+        tempData.push({
+          _id: productId,
+          quantity: cartItems[productId]
+        });
+      }
+    }
+    setCartData(tempData);
+  }, [cartItems]);
+  
   return (
     <div className="cart">
       <div className="title">
@@ -38,15 +37,29 @@ const Cart = () => {
                   <img src={productData.image[0]} alt="" />
                   <div className="name">
                     <p>{productData.name}</p>
+                    <div className="price">
+                       <p>{productData.price}{currency}</p>
+                    </div>
                   </div>
                  </div>
+                 <input onChange={(e)=>e.target.value==='' || e.target.value==='0' ? null: updateQuatity(item._id,Number(e.target.value))} className="input" type="number" min={1} defaultValue={item.quantity}/>
+                 <img onClick={()=>updateQuatity(item._id,0)} className="bin" src={assets.bin_icon} alt="" />
               </div>
             )
           })
         }
       </div>
+      <div className="total">
+        <div className="total2">
+        <CartTotal/>
+        </div>
+        <div className="order">
+           <button>Proceed to checkout</button>
+        </div>
+      </div>
 
     </div>
+
   )
 }
 
