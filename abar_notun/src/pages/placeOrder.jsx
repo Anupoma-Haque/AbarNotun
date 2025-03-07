@@ -1,8 +1,8 @@
 import React from 'react'
 
-function placeOrder() {
+const placeOrder = () => {
   return (
-    <div>placeOrder</div>
+    <div>PlaceOrder</div>
   )
 }
 

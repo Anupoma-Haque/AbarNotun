@@ -5,7 +5,7 @@ import { assets } from '../comp/Assets/assets';
 import CartTotal from '../comp/CartTotal';
 const Cart = () => {
 
-  const {products,currency,cartItems,updateQuatity}=useContext(ShopContext);
+  const {products,currency,cartItems,updateQuatity,navigate}=useContext(ShopContext);
   const [cartData,setCartData]=useState([]);
   useEffect(() => {
     const tempData = [];
@@ -19,7 +19,10 @@ const Cart = () => {
     }
     setCartData(tempData);
   }, [cartItems]);
-  
+  const handleCheckout = () => {
+    console.log("Navigating to checkout...");
+    navigate('/place_order');
+};
   return (
     <div className="cart">
       <div className="title">
@@ -51,10 +54,10 @@ const Cart = () => {
       </div>
       <div className="total">
         <div className="total2">
-        <CartTotal/>
+       <CartTotal/>
         </div>
         <div className="order">
-           <button>Proceed to checkout</button>
+        <button onClick={()=>navigate('/order-place')}>Proceed to checkout</button>
         </div>
       </div>
 

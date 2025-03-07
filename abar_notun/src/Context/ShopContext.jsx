@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState} from "react";
 //import {products} from "../Aset/assets"
 import { products } from "../comp/Assets/assets";
-//import {useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 export const ShopContext=createContext();
 
@@ -11,7 +11,7 @@ const ShopContextProvider=(props)=>{
     const [cartItems,setCartItems]=useState({});
     //const backendUrl=import.meta.env.REACT_APP_BACKEND_URL
     //const [token,setToken]=useState('')
-    //const navigate=useNavigate();
+    const navigate=useNavigate();
 
     const addToCart=async(itemId)=>{
         let cartData=structuredClone(cartItems);
@@ -63,9 +63,7 @@ const getCartAmount=()=>{
             cartItems,addToCart,
             getCartCount,updateQuatity,
             getCartAmount,
-            
-            
-           // navigate,
+             navigate,
            // setToken,token
     }
     return(

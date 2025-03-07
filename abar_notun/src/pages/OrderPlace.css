@@ -1,0 +1,150 @@
+.order{
+    display: flex; 
+padding-top: 1.25rem; 
+flex-direction: column; 
+gap: 1rem; 
+justify-content: space-between; 
+border-top-width: 1px; 
+}
+
+@media (min-width: 640px) { 
+  .order{padding-top:20px; 
+flex-direction: row; 
+
+  }
+ }
+
+ .order2{
+    display: flex; 
+    flex-direction: column; 
+gap: 1rem; 
+width: 50%; 
+font-weight: 600;
+
+ }
+
+@media (min-width: 640px) { 
+  .order2{max-width: 250px;
+    font-weight: 600;
+}
+ }
+.order3{
+    margin-top: 0.75rem;
+margin-bottom: 0.75rem; 
+font-size: 1.25rem;
+line-height: 1.75rem; 
+
+}
+@media (min-width: 640px) { 
+    .order3{
+        font-size: 1.5rem;
+  line-height: 2rem; 
+    }
+   }
+
+   .info{
+    display: flex; 
+   gap: 0.75rem; 
+
+   }
+   .info input{
+    padding-top: 0.375rem;
+padding-bottom: 0.375rem; 
+padding-left: 0.875rem;
+padding-right: 0.875rem; 
+border-radius: 0.25rem; 
+border-width: 1px; 
+border-color: #D1D5DB; 
+width: 100%; 
+
+margin-left: 20px;
+   }
+   .order2 input{
+
+    padding-top: 0.375rem;
+    padding-bottom: 0.375rem; 
+    padding-left: 0.775rem;
+    padding-right: 0.875rem; 
+    border-radius: 0.25rem; 
+    border-width: 1px; 
+    border-color: #D1D5DB; 
+    width: 150%; 
+    
+    margin-left: 30px;
+   }
+
+   .right{
+    margin-top: 2rem; 
+    align-items: flex-start;
+   }
+
+   .right2{
+    margin-top: 2rem;
+    min-width: 150px;
+   }
+
+   .payment{
+    margin-top: 3rem; 
+    
+   }
+   .payment p{
+    font-size: 18px;
+    font-weight: 600;
+   }
+  
+   .payment1{
+    display: flex; 
+   flex-direction: column; 
+   gap: 0.75rem; 
+   
+   }
+   
+@media (min-width: 1024px) { 
+   .payment1{
+     flex-direction: row;
+    } 
+   }
+
+   .payment2{
+    display: flex; 
+padding-left: 0.75rem;
+padding-right: 0.75rem; 
+padding-top: 0.5rem; 
+gap: 0.75rem; 
+align-items: center; 
+border-width: 1px; 
+cursor: pointer; 
+
+   }
+   
+   .payment2 img{
+    margin-left: 1rem;
+margin-right: 1rem; 
+height: 1.25rem; 
+   }
+   .payment-method {
+    min-width: 14px;  /* Equivalent to min-w-3.5 (0.875rem * 16px = 14px) */
+    height: 14px;      /* Equivalent to h-3.5 (0.875rem * 16px = 14px) */
+    border: 1px solid #e5e7eb; /* Equivalent to border (default Tailwind border color) */
+    border-radius: 50%; /* Equivalent to rounded-full */
+}
+
+.payment-method.bg-green {
+    background-color:black; /* Equivalent to bg-green-400 */
+}
+.order{
+    margin-top: 2rem; 
+width: 90%; 
+text-align: right;
+}
+
+.order button{
+        background-color: black;
+        color: white;
+        padding-left: 2rem;  /* px-16 = 4rem = 64px */
+        padding-right: 2rem; /* px-16 = 4rem = 64px */
+        padding-top: 0.75rem; /* py-3 = 0.75rem = 12px */
+        padding-bottom: 0.75rem; /* py-3 = 0.75rem = 12px */
+        font-size: 0.975rem; 
+        
+}

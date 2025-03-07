@@ -12,6 +12,11 @@ import Login from './pages/Login'
 import Community from './pages/Community'
 import Footer from './comp/Footer/Footer'
 import ShopContextProvider from './Context/ShopContext'
+import OrderPlace from './pages/OrderPlace'
+import OrdersFile from './pages/OrdersFile'
+
+
+
 
 
 
@@ -19,8 +24,9 @@ import ShopContextProvider from './Context/ShopContext'
 const App = () => {
   return (
     <div>
-      <ShopContextProvider>
+      
     <BrowserRouter>
+    <ShopContextProvider>
      <Navbar/>
      <Routes>
       <Route path='/' element={<Home/>}/>
@@ -34,11 +40,13 @@ const App = () => {
       <Route path='/cart' element={<Cart/>}/>
       <Route path='login' element={<Login/>}/>
       <Route path='/community' element={<Community/>}/>
+      <Route path='/order-place' element={<OrderPlace/>}/>
+      <Route path='/orders' element={<OrdersFile/>}/>
       </Routes>
       <Footer/>
-    
+      </ShopContextProvider>
     </BrowserRouter>
-    </ShopContextProvider>
+    
     </div>
   )
 }
