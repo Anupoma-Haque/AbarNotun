@@ -14,7 +14,7 @@ import Footer from './comp/Footer/Footer'
 import ShopContextProvider from './Context/ShopContext'
 import OrderPlace from './pages/OrderPlace'
 import OrdersFile from './pages/OrdersFile'
-
+import { ToastContainer } from "react-toastify";
 
 
 

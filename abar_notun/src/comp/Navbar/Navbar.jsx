@@ -7,7 +7,14 @@ import { ShopContext } from '../../Context/ShopContext';
 
 export const Navbar = () => {
   const [menu,setMenu]=useState("home");
-  const {getCartCount}=useContext(ShopContext);
+  const {getCartCount,navigate,token,setToken,setCartItems}=useContext(ShopContext);
+
+  const logout=()=>{
+     localStorage.removeItem('token')
+     setToken('')
+     //setCartItems({})
+     navigate('/login')
+  }
   return (
     <div className='nav'>
          <div className="nav_logo">
@@ -20,8 +27,10 @@ export const Navbar = () => {
                  <li onClick={()=>{setMenu("add")}}><Link style={{textDecoration:'none'}} to='/add'>Add</Link> {menu==="add"?<hr/>:<></>}</li>
                  <li onClick={()=>{setMenu("community")}}><Link style={{textDecoration:'none'}} to='/community'>Community</Link> {menu==="community"?<hr/>:<></>}</li>
          </ul>
-         <div  className="nav_login_cart">
-                <Link to='/login'> <button>Login</button></Link>  
+         <div className="nav_login_cart">
+                <p onClick={()=>token? navigate('/orders'):navigate('/login')}>Orders</p>
+                <Link to='/login'> <p>Login</p></Link>  
+                <p onClick={logout}>Logout</p>
                <Link to='/cart'> 
                <img src={cart_icon} alt="" />
                

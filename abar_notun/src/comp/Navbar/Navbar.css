@@ -48,12 +48,14 @@
     background-color: #54162B;
 }
 
-.nav_login_cart {
+.nav_login_cart  {
     display: flex;
     align-items: center;
     gap: 45px;
 }
-
+.nav_login_cart P{
+    cursor: pointer;
+}
 .nav_login_cart button {
     width: 157px;
     height: 58px;

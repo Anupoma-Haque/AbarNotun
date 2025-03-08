@@ -2,7 +2,7 @@ import { createContext, useEffect, useState} from "react";
 //import {products} from "../Aset/assets"
 import { products } from "../comp/Assets/assets";
 import {useNavigate} from "react-router-dom";
-
+//import axios from 'axios'
 export const ShopContext=createContext();
 
 const ShopContextProvider=(props)=>{
@@ -10,9 +10,11 @@ const ShopContextProvider=(props)=>{
     const delivery_fee=10;
     const [cartItems,setCartItems]=useState({});
     //const backendUrl=import.meta.env.REACT_APP_BACKEND_URL
-    //const [token,setToken]=useState('')
+    const backendUrl= "http://localhost:3000"
+    //console.log(backendUrl);
+    const [token,setToken]=useState('')
     const navigate=useNavigate();
-
+    
     const addToCart=async(itemId)=>{
         let cartData=structuredClone(cartItems);
 
@@ -58,13 +60,19 @@ const getCartAmount=()=>{
     return totalAmount;
 }
 
+  useEffect(()=>{
+     if(!token && localStorage.getItem('token')){
+       setToken(localStorage.getItem('token'))
+     }
+  },[])
     const value={
             products,currency,delivery_fee,
             cartItems,addToCart,
             getCartCount,updateQuatity,
             getCartAmount,
              navigate,
-           // setToken,token
+            backendUrl,
+            setToken,token,
     }
     return(
         <ShopContext.Provider value={value}>
